@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Asante Imports and Logistics - Used Toyota Cars to Ghana</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --color-bg: #ffffff;
+      --color-text-primary: #111827;
+      --color-text-secondary: #6b7280;
+      --color-accent: #111827;
+      --color-accent-hover: #374151;
+      --shadow-card: rgba(0,0,0,0.05);
+      --border-radius: 12px;
+    }
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: var(--color-bg);
+      color: var(--color-text-secondary);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    a:hover,
+    a:focus {
+      color: var(--color-accent-hover);
+      outline: none;
+    }
+    .container {
+      max-width: 1200px;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      margin: 0 auto;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      background: var(--color-bg);
+      z-index: 100;
+      box-shadow: 0 1px 4px var(--shadow-card);
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 80px;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    .logo {
+      font-weight: 800;
+      font-size: 3.25rem;
+      color: var(--color-accent);
+      user-select: none;
+      letter-spacing: 0.08em;
+      position: relative;
+      line-height: 1;
+    }
+    .logo::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 60%;
+      height: 4px;
+      background: linear-gradient(90deg, #3b82f6, #9333ea);
+      border-radius: 4px;
+      filter: drop-shadow(0 1px 1px rgba(0,0,0,0.1));
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--color-text-secondary);
+    }
+    nav ul li a {
+      padding: 0.25rem 0.5rem;
+      border-radius: var(--border-radius);
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    nav ul li a:hover,
+    nav ul li a:focus {
+      background-color: var(--shadow-card);
+      color: var(--color-accent);
+      outline: none;
+    }
+    .btn-primary {
+      background-color: var(--color-accent);
+      color: #fff;
+      font-weight: 700;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: var(--border-radius);
+      cursor: pointer;
+      font-size: 1.1rem;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      user-select: none;
+    }
+    .btn-primary:hover,
+    .btn-primary:focus {
+      background-color: var(--color-accent-hover);
+      outline: none;
+      transform: scale(1.05);
+    }
+    main {
+      padding-top: 3rem;
+      padding-bottom: 4rem;
+    }
+    .hero {
+      text-align: center;
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-bottom: 4rem;
+      user-select: none;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      color: var(--color-accent);
+      margin-bottom: 0.5rem;
+      line-height: 1.1;
+    }
+    .hero p {
+      font-size: 1.25rem;
+      color: var(--color-text-secondary);
+      margin-bottom: 2rem;
+    }
+    section.features {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      margin-bottom: 4rem;
+      user-select: none;
+    }
+    .card {
+      background: #f9fafb;
+      border-radius: var(--border-radius);
+      padding: 1.75rem 2rem;
+      box-shadow: 0 8px 24px var(--shadow-card);
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .card:hover,
+    .card:focus-within {
+      box-shadow: 0 12px 36px rgba(0,0,0,0.1);
+      transform: translateY(-6px);
+      outline: none;
+    }
+    .card h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--color-accent);
+      margin-bottom: 0.5rem;
+    }
+    .card p {
+      font-size: 1rem;
+      color: var(--color-text-secondary);
+      margin-bottom: 0;
+    }
+    section.why-choose-us {
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      padding: 0 1rem 4rem;
+      user-select: none;
+    }
+    .why-choose-us h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--color-accent);
+      margin-bottom: 1rem;
+    }
+    .why-choose-us p {
+      font-size: 1.125rem;
+      color: var(--color-text-secondary);
+      line-height: 1.5;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    form.contact-form {
+      max-width: 540px;
+      margin: 0 auto;
+      background: #f9fafb;
+      border-radius: var(--border-radius);
+      padding: 2rem;
+      box-shadow: 0 8px 24px var(--shadow-card);
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      user-select: none;
+    }
+    form.contact-form label {
+      font-weight: 600;
+      color: var(--color-accent);
+      font-size: 0.95rem;
+    }
+    form.contact-form input,
+    form.contact-form select,
+    form.contact-form textarea {
+      padding: 0.75rem 1rem;
+      font-size: 1rem;
+      border: 1.5px solid #d1d5db;
+      border-radius: var(--border-radius);
+      font-family: 'Poppins', sans-serif;
+      resize: vertical;
+      transition: border-color 0.3s ease;
+    }
+    form.contact-form input:focus,
+    form.contact-form select:focus,
+    form.contact-form textarea:focus {
+      border-color: var(--color-accent);
+      outline: none;
+      box-shadow: 0 0 3px var(--color-accent);
+    }
+    form.contact-form button {
+      align-self: flex-start;
+      margin-top: 1rem;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      color: var(--color-text-secondary);
+      font-size: 0.9rem;
+      user-select: none;
+      border-top: 1px solid #e5e7eb;
+      margin-top: 4rem;
+    }
+    /* Responsive tweaks */
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 2.25rem;
+      }
+      nav ul {
+        gap: 1rem;
+      }
+      header nav {
+        height: 72px;
+      }
+      .logo {
+        font-size: 2.25rem;
+        letter-spacing: 0.05em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="container" role="navigation" aria-label="Primary Navigation">
+      <div class="logo" aria-label="Asante Imports and Logistics logo" tabindex="0">Asante Imports</div>
+      <ul>
+        <li><a href="#cars" tabindex="0">Cars</a></li>
+        <li><a href="#why" tabindex="0">Why Choose Us</a></li>
+        <li><a href="#contact" tabindex="0">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="hero" role="banner" aria-label="Hero Section">
+      <h1>Premium Used Toyota Cars from Europe, Asia &amp; America to Ghana</h1>
+      <p>Your trusted partner for importing top-quality Toyota Corolla and Yaris vehicles, delivering value and reliability to Ghana.</p>
+      <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})" aria-label="Contact us now">Contact Us</button>
+    </section>
+    <section id="cars" class="features" aria-label="Available Car Models and Origins">
+      <article class="card" tabindex="0" role="region" aria-labelledby="corolla-title">
+        <h3 id="corolla-title">Toyota Corolla</h3>
+        <p>Reliable and efficient, available in various trims imported from Europe, Asia, and America.</p>
+      </article>
+      <article class="card" tabindex="0" role="region" aria-labelledby="yaris-title">
+        <h3 id="yaris-title">Toyota Yaris</h3>
+        <p>Compact and economical, carefully selected imports from trusted markets across the globe.</p>
+      </article>
+      <article class="card" tabindex="0" role="region" aria-labelledby="origins-title">
+        <h3 id="origins-title">Sources</h3>
+        <p>We import from Europe, Asia, and America, ensuring a wide selection and competitive pricing.</p>
+      </article>
+    </section>
+    <section id="why" class="why-choose-us" aria-label="Why Choose Asante Imports and Logistics">
+      <h2>Why Choose Asante Imports and Logistics?</h2>
+      <p>We specialize in importing high-quality, used Toyota Corolla and Yaris cars with thorough inspections and reliable shipping to Ghana. Our dedication to customer satisfaction and competitive prices makes us your best choice for used imported vehicles. Trust us to deliver excellence to your doorstep.</p>
+    </section>
+    <section id="contact" aria-label="Contact Form">
+      <form class="contact-form" aria-describedby="contact-desc" onsubmit="return false;">
+        <div id="contact-desc" style="display:none;">Contact form to inquire about vehicles or services.</div>
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Your full name" required autocomplete="name" />
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email" />
+        <label for="model">Interested Model</label>
+        <select id="model" name="model" required>
+          <option value="" disabled selected>Select a model</option>
+          <option value="corolla">Toyota Corolla</option>
+          <option value="yaris">Toyota Yaris</option>
+          <option value="both">Both Models</option>
+        </select>
+        <label for="message">Additional Information</label>
+        <textarea id="message" name="message" rows="4" placeholder="Any specific requests or questions?"></textarea>
+        <button type="submit" class="btn-primary" aria-label="Send inquiry">Send Inquiry</button>
+      </form>
+    </section>
+  </main>
+  <footer>
+    &copy; 2024 Asante Imports and Logistics. All rights reserved.
+  </footer>
+</body>
+</html>
